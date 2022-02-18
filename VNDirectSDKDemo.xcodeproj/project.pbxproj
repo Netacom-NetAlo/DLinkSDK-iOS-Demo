@@ -1,0 +1,763 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2F60971127BF93B6009524DC /* NotificationExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2F6DF24427BE393E00AFF4F5 /* NotificationExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2F6DF20627BDF46F00AFF4F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6DF20527BDF46F00AFF4F5 /* AppDelegate.swift */; };
+		2F6DF20A27BDF46F00AFF4F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6DF20927BDF46F00AFF4F5 /* ViewController.swift */; };
+		2F6DF20D27BDF46F00AFF4F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F6DF20B27BDF46F00AFF4F5 /* Main.storyboard */; };
+		2F6DF20F27BDF47000AFF4F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F6DF20E27BDF47000AFF4F5 /* Assets.xcassets */; };
+		2F6DF21227BDF47000AFF4F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F6DF21027BDF47000AFF4F5 /* LaunchScreen.storyboard */; };
+		2F6DF22D27BDFBD700AFF4F5 /* BuildConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6DF22127BDFBD700AFF4F5 /* BuildConfig.swift */; };
+		2F6DF22E27BDFBD700AFF4F5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2F6DF22227BDFBD700AFF4F5 /* GoogleService-Info.plist */; };
+		2F6DF23727BDFE2C00AFF4F5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2F6DF23927BDFE2C00AFF4F5 /* InfoPlist.strings */; };
+		2F6DF23D27BDFF5500AFF4F5 /* DemoSDKVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6DF23C27BDFF5500AFF4F5 /* DemoSDKVC.swift */; };
+		2F6DF23F27BE003F00AFF4F5 /* DemoMainTabbarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6DF23E27BE003F00AFF4F5 /* DemoMainTabbarVC.swift */; };
+		2F6DF24727BE393E00AFF4F5 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6DF24627BE393E00AFF4F5 /* NotificationService.swift */; };
+		2F6DF25627BE39DF00AFF4F5 /* BuildConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6DF25227BE39DF00AFF4F5 /* BuildConfig.swift */; };
+		2F6DF25827BE39DF00AFF4F5 /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6DF25527BE39DF00AFF4F5 /* Injection.swift */; };
+		6CE3984438778B1550430FB2 /* Pods_VNDirectSDKDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE63875BF67E812D999E16C3 /* Pods_VNDirectSDKDemo.framework */; };
+		D6EC0EC51BB4A08272977386 /* Pods_NotificationExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C58852D07850DAEAB0082D2E /* Pods_NotificationExtension.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2F60971227BF93B6009524DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2F6DF1FA27BDF46F00AFF4F5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2F6DF24327BE393E00AFF4F5;
+			remoteInfo = NotificationExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2F60971427BF93B7009524DC /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				2F60971127BF93B6009524DC /* NotificationExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2F60971527BF9427009524DC /* NotificationExtensionDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NotificationExtensionDebug.entitlements; sourceTree = "<group>"; };
+		2F6DF20227BDF46F00AFF4F5 /* VNDirectSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VNDirectSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F6DF20527BDF46F00AFF4F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2F6DF20927BDF46F00AFF4F5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2F6DF20C27BDF46F00AFF4F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2F6DF20E27BDF47000AFF4F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2F6DF21127BDF47000AFF4F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2F6DF21927BDF9E500AFF4F5 /* VNDirectSDKDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VNDirectSDKDemo.entitlements; sourceTree = "<group>"; };
+		2F6DF22127BDFBD700AFF4F5 /* BuildConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildConfig.swift; sourceTree = "<group>"; };
+		2F6DF22227BDFBD700AFF4F5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2F6DF23327BDFC3D00AFF4F5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F6DF23827BDFE2C00AFF4F5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2F6DF23A27BDFE5500AFF4F5 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2F6DF23C27BDFF5500AFF4F5 /* DemoSDKVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoSDKVC.swift; sourceTree = "<group>"; };
+		2F6DF23E27BE003F00AFF4F5 /* DemoMainTabbarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoMainTabbarVC.swift; sourceTree = "<group>"; };
+		2F6DF24427BE393E00AFF4F5 /* NotificationExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NotificationExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F6DF24627BE393E00AFF4F5 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		2F6DF25227BE39DF00AFF4F5 /* BuildConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildConfig.swift; sourceTree = "<group>"; };
+		2F6DF25327BE39DF00AFF4F5 /* NotificationExtension.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = NotificationExtension.entitlements; sourceTree = "<group>"; };
+		2F6DF25427BE39DF00AFF4F5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F6DF25527BE39DF00AFF4F5 /* Injection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
+		6C3DA1E2F50ED31011FA974A /* Pods-NotificationExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotificationExtension.debug.xcconfig"; path = "Target Support Files/Pods-NotificationExtension/Pods-NotificationExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		AA856060B0095BA387071441 /* Pods-VNDirectSDKDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VNDirectSDKDemo.debug.xcconfig"; path = "Target Support Files/Pods-VNDirectSDKDemo/Pods-VNDirectSDKDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		C58852D07850DAEAB0082D2E /* Pods_NotificationExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NotificationExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDE70C34F30FDB532F916ACA /* Pods-NotificationExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotificationExtension.release.xcconfig"; path = "Target Support Files/Pods-NotificationExtension/Pods-NotificationExtension.release.xcconfig"; sourceTree = "<group>"; };
+		E412EC8A208E97DFD534FE80 /* Pods-VNDirectSDKDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VNDirectSDKDemo.release.xcconfig"; path = "Target Support Files/Pods-VNDirectSDKDemo/Pods-VNDirectSDKDemo.release.xcconfig"; sourceTree = "<group>"; };
+		EE63875BF67E812D999E16C3 /* Pods_VNDirectSDKDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VNDirectSDKDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2F6DF1FF27BDF46F00AFF4F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CE3984438778B1550430FB2 /* Pods_VNDirectSDKDemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F6DF24127BE393E00AFF4F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6EC0EC51BB4A08272977386 /* Pods_NotificationExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2F6DF1F927BDF46F00AFF4F5 = {
+			isa = PBXGroup;
+			children = (
+				2F6DF20427BDF46F00AFF4F5 /* VNDirectSDKDemo */,
+				2F6DF24527BE393E00AFF4F5 /* NotificationExtension */,
+				2F6DF20327BDF46F00AFF4F5 /* Products */,
+				EBE6D99E49E1145B40B1C8CC /* Pods */,
+				6AE09F5EDA823F648D5455DD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2F6DF20327BDF46F00AFF4F5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2F6DF20227BDF46F00AFF4F5 /* VNDirectSDKDemo.app */,
+				2F6DF24427BE393E00AFF4F5 /* NotificationExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2F6DF20427BDF46F00AFF4F5 /* VNDirectSDKDemo */ = {
+			isa = PBXGroup;
+			children = (
+				2F6DF23B27BDFF2B00AFF4F5 /* Base */,
+				2F6DF21A27BDFBD700AFF4F5 /* Enviroment */,
+				2F6DF20527BDF46F00AFF4F5 /* AppDelegate.swift */,
+				2F6DF20927BDF46F00AFF4F5 /* ViewController.swift */,
+				2F6DF20B27BDF46F00AFF4F5 /* Main.storyboard */,
+				2F6DF20E27BDF47000AFF4F5 /* Assets.xcassets */,
+				2F6DF21027BDF47000AFF4F5 /* LaunchScreen.storyboard */,
+				2F6DF23927BDFE2C00AFF4F5 /* InfoPlist.strings */,
+			);
+			path = VNDirectSDKDemo;
+			sourceTree = "<group>";
+		};
+		2F6DF21A27BDFBD700AFF4F5 /* Enviroment */ = {
+			isa = PBXGroup;
+			children = (
+				2F6DF22027BDFBD700AFF4F5 /* Production */,
+			);
+			path = Enviroment;
+			sourceTree = "<group>";
+		};
+		2F6DF22027BDFBD700AFF4F5 /* Production */ = {
+			isa = PBXGroup;
+			children = (
+				2F6DF23327BDFC3D00AFF4F5 /* Info.plist */,
+				2F6DF22127BDFBD700AFF4F5 /* BuildConfig.swift */,
+				2F6DF22227BDFBD700AFF4F5 /* GoogleService-Info.plist */,
+				2F6DF21927BDF9E500AFF4F5 /* VNDirectSDKDemo.entitlements */,
+			);
+			path = Production;
+			sourceTree = "<group>";
+		};
+		2F6DF23B27BDFF2B00AFF4F5 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				2F6DF23C27BDFF5500AFF4F5 /* DemoSDKVC.swift */,
+				2F6DF23E27BE003F00AFF4F5 /* DemoMainTabbarVC.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		2F6DF24527BE393E00AFF4F5 /* NotificationExtension */ = {
+			isa = PBXGroup;
+			children = (
+				2F60971527BF9427009524DC /* NotificationExtensionDebug.entitlements */,
+				2F6DF25127BE39DF00AFF4F5 /* Config */,
+				2F6DF25527BE39DF00AFF4F5 /* Injection.swift */,
+				2F6DF24627BE393E00AFF4F5 /* NotificationService.swift */,
+			);
+			path = NotificationExtension;
+			sourceTree = "<group>";
+		};
+		2F6DF25127BE39DF00AFF4F5 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				2F6DF25227BE39DF00AFF4F5 /* BuildConfig.swift */,
+				2F6DF25327BE39DF00AFF4F5 /* NotificationExtension.entitlements */,
+				2F6DF25427BE39DF00AFF4F5 /* Info.plist */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		6AE09F5EDA823F648D5455DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C58852D07850DAEAB0082D2E /* Pods_NotificationExtension.framework */,
+				EE63875BF67E812D999E16C3 /* Pods_VNDirectSDKDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EBE6D99E49E1145B40B1C8CC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6C3DA1E2F50ED31011FA974A /* Pods-NotificationExtension.debug.xcconfig */,
+				DDE70C34F30FDB532F916ACA /* Pods-NotificationExtension.release.xcconfig */,
+				AA856060B0095BA387071441 /* Pods-VNDirectSDKDemo.debug.xcconfig */,
+				E412EC8A208E97DFD534FE80 /* Pods-VNDirectSDKDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2F6DF20127BDF46F00AFF4F5 /* VNDirectSDKDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F6DF21627BDF47000AFF4F5 /* Build configuration list for PBXNativeTarget "VNDirectSDKDemo" */;
+			buildPhases = (
+				9EE7DE25F13D4EB8000CFB90 /* [CP] Check Pods Manifest.lock */,
+				2F6DF1FE27BDF46F00AFF4F5 /* Sources */,
+				2F6DF1FF27BDF46F00AFF4F5 /* Frameworks */,
+				2F6DF20027BDF46F00AFF4F5 /* Resources */,
+				10A52662DE7F4979999B057A /* [CP] Embed Pods Frameworks */,
+				2F60971427BF93B7009524DC /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2F60971327BF93B6009524DC /* PBXTargetDependency */,
+			);
+			name = VNDirectSDKDemo;
+			productName = VNDirectSDKDemo;
+			productReference = 2F6DF20227BDF46F00AFF4F5 /* VNDirectSDKDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2F6DF24327BE393E00AFF4F5 /* NotificationExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F6DF24F27BE393E00AFF4F5 /* Build configuration list for PBXNativeTarget "NotificationExtension" */;
+			buildPhases = (
+				3F5E5D0027C13D2C774E1638 /* [CP] Check Pods Manifest.lock */,
+				2F6DF24027BE393E00AFF4F5 /* Sources */,
+				2F6DF24127BE393E00AFF4F5 /* Frameworks */,
+				2F6DF24227BE393E00AFF4F5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NotificationExtension;
+			productName = NotificationExtension;
+			productReference = 2F6DF24427BE393E00AFF4F5 /* NotificationExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2F6DF1FA27BDF46F00AFF4F5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					2F6DF20127BDF46F00AFF4F5 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					2F6DF24327BE393E00AFF4F5 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 2F6DF1FD27BDF46F00AFF4F5 /* Build configuration list for PBXProject "VNDirectSDKDemo" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				vi,
+			);
+			mainGroup = 2F6DF1F927BDF46F00AFF4F5;
+			productRefGroup = 2F6DF20327BDF46F00AFF4F5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2F6DF20127BDF46F00AFF4F5 /* VNDirectSDKDemo */,
+				2F6DF24327BE393E00AFF4F5 /* NotificationExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2F6DF20027BDF46F00AFF4F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F6DF21227BDF47000AFF4F5 /* LaunchScreen.storyboard in Resources */,
+				2F6DF20F27BDF47000AFF4F5 /* Assets.xcassets in Resources */,
+				2F6DF20D27BDF46F00AFF4F5 /* Main.storyboard in Resources */,
+				2F6DF22E27BDFBD700AFF4F5 /* GoogleService-Info.plist in Resources */,
+				2F6DF23727BDFE2C00AFF4F5 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F6DF24227BE393E00AFF4F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		10A52662DE7F4979999B057A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VNDirectSDKDemo/Pods-VNDirectSDKDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VNDirectSDKDemo/Pods-VNDirectSDKDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VNDirectSDKDemo/Pods-VNDirectSDKDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3F5E5D0027C13D2C774E1638 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NotificationExtension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9EE7DE25F13D4EB8000CFB90 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VNDirectSDKDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2F6DF1FE27BDF46F00AFF4F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F6DF20A27BDF46F00AFF4F5 /* ViewController.swift in Sources */,
+				2F6DF23F27BE003F00AFF4F5 /* DemoMainTabbarVC.swift in Sources */,
+				2F6DF22D27BDFBD700AFF4F5 /* BuildConfig.swift in Sources */,
+				2F6DF23D27BDFF5500AFF4F5 /* DemoSDKVC.swift in Sources */,
+				2F6DF20627BDF46F00AFF4F5 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F6DF24027BE393E00AFF4F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F6DF25827BE39DF00AFF4F5 /* Injection.swift in Sources */,
+				2F6DF25627BE39DF00AFF4F5 /* BuildConfig.swift in Sources */,
+				2F6DF24727BE393E00AFF4F5 /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2F60971327BF93B6009524DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2F6DF24327BE393E00AFF4F5 /* NotificationExtension */;
+			targetProxy = 2F60971227BF93B6009524DC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2F6DF20B27BDF46F00AFF4F5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2F6DF20C27BDF46F00AFF4F5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2F6DF21027BDF47000AFF4F5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2F6DF21127BDF47000AFF4F5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		2F6DF23927BDFE2C00AFF4F5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2F6DF23827BDFE2C00AFF4F5 /* en */,
+				2F6DF23A27BDFE5500AFF4F5 /* vi */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2F6DF21427BDF47000AFF4F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					x86_64,
+					arm64,
+				);
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2F6DF21527BDF47000AFF4F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					x86_64,
+					arm64,
+				);
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2F6DF21727BDF47000AFF4F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA856060B0095BA387071441 /* Pods-VNDirectSDKDemo.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = (
+					arm64,
+					x86_64,
+				);
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = VNDirectSDKDemo/Enviroment/Production/VNDirectSDKDemo.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 834N5YDHFU;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VNDirectSDKDemo/Enviroment/Production/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = VNDirectSDKDemo;
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "Events to which you subscribed will be synchronized with your phone’s calendar";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Sending photo and video call";
+				INFOPLIST_KEY_NSContactsUsageDescription = "DLink will continously upload your contacts to its heavily encrypted cloud servers to let you connect with your friends quickly";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "If you’d like to share your Location with friends, DLink needs location access to use this feature";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "If you’d like to share your Live Location with friends, DLink needs location access when the app is in background";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "If you’d like to share your Location with friends, DLink needs location access to use this feature";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Using voice call";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Sending photo and updating your profile";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Your data will be used to provide you a better and personalized ad experience";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = armv7;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = vn.com.vndirect.stockchat;
+				PRODUCT_MODULE_NAME = VNDirectSDKDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "prod vndirect";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		2F6DF21827BDF47000AFF4F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E412EC8A208E97DFD534FE80 /* Pods-VNDirectSDKDemo.release.xcconfig */;
+			buildSettings = {
+				ARCHS = (
+					arm64,
+					x86_64,
+				);
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = VNDirectSDKDemo/Enviroment/Production/VNDirectSDKDemo.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 834N5YDHFU;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VNDirectSDKDemo/Enviroment/Production/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = VNDirectSDKDemo;
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "Events to which you subscribed will be synchronized with your phone’s calendar";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Sending photo and video call";
+				INFOPLIST_KEY_NSContactsUsageDescription = "DLink will continously upload your contacts to its heavily encrypted cloud servers to let you connect with your friends quickly";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "If you’d like to share your Location with friends, DLink needs location access to use this feature";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "If you’d like to share your Live Location with friends, DLink needs location access when the app is in background";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "If you’d like to share your Location with friends, DLink needs location access to use this feature";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Using voice call";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Sending photo and updating your profile";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Your data will be used to provide you a better and personalized ad experience";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = armv7;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = vn.com.vndirect.stockchat;
+				PRODUCT_MODULE_NAME = VNDirectSDKDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "prod vndirect";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		2F6DF24D27BE393E00AFF4F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C3DA1E2F50ED31011FA974A /* Pods-NotificationExtension.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = (
+					x86_64,
+					arm64,
+				);
+				CODE_SIGN_ENTITLEMENTS = NotificationExtension/Config/NotificationExtension.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 834N5YDHFU;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NotificationExtension/Config/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NotificationExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = vn.com.vndirect.stockchat.noti;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "prod vndirect noti";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		2F6DF24E27BE393E00AFF4F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDE70C34F30FDB532F916ACA /* Pods-NotificationExtension.release.xcconfig */;
+			buildSettings = {
+				ARCHS = (
+					x86_64,
+					arm64,
+				);
+				CODE_SIGN_ENTITLEMENTS = NotificationExtension/Config/NotificationExtension.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 834N5YDHFU;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NotificationExtension/Config/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NotificationExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = vn.com.vndirect.stockchat.noti;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "prod vndirect noti";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2F6DF1FD27BDF46F00AFF4F5 /* Build configuration list for PBXProject "VNDirectSDKDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F6DF21427BDF47000AFF4F5 /* Debug */,
+				2F6DF21527BDF47000AFF4F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2F6DF21627BDF47000AFF4F5 /* Build configuration list for PBXNativeTarget "VNDirectSDKDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F6DF21727BDF47000AFF4F5 /* Debug */,
+				2F6DF21827BDF47000AFF4F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2F6DF24F27BE393E00AFF4F5 /* Build configuration list for PBXNativeTarget "NotificationExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F6DF24D27BE393E00AFF4F5 /* Debug */,
+				2F6DF24E27BE393E00AFF4F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2F6DF1FA27BDF46F00AFF4F5 /* Project object */;
+}
