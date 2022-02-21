@@ -27,18 +27,18 @@ def database_pods
 end
 
 def language_pods
-  pod 'Localize-Swift', :git => 'https://github.com/thanhphong-tran/Localize-Swift'
+  pod 'Localize-Swift', :git => 'https://github.com/Netacom-NetAlo/Localize-iOS'
 end
 
 def netalo_pods
   #switch 1 or 2
-#  pod 'NetacomSDKs', :git => 'http://github.com/hieunetacom/NetacomSDKs', branch: 'vnd/sdk_simulator_v1'
-  pod 'NetacomSDKs', :git => 'http://github.com/hieunetacom/NetacomSDKs', branch: 'vnd/sdk_main_v1'
+#  pod 'NetacomSDKs', :git => 'https://github.com/Netacom-NetAlo/NetaloSDKs-iOS', branch: 'vnd/sdk_simulator_v1'
+  pod 'NetacomSDKs', :git => 'https://github.com/Netacom-NetAlo/NetaloSDKs-iOS', branch: 'vnd/sdk_main_v1'
   noti_netalo_pods
 end
 
 def noti_netalo_pods
-  pod 'NotificationSDK', :git => 'http://gitlab.ecdc.vn/hieubui/NotificationSDK', branch: 'vnd/sdk_noti_v1'
+  pod 'NotificationSDK', :git => 'https://github.com/Netacom-NetAlo/NotiSDKs-iOS', branch: 'vnd/sdk_noti_v1'
 end
 
 def support_noti_pods
@@ -47,7 +47,7 @@ def support_noti_pods
 end
 
 def common_pods
-  pod 'MessageKit', :git => 'https://github.com/thanhphong-tran/messagekit'
+  pod 'MessageKit', :git => 'https://github.com/Netacom-NetAlo/Messagekit-iOS'
   pod 'SwiftLinkPreview', :git => 'https://github.com/Netacom-NetAlo/SwiftLinkPreview', branch: 'dev_1.0'
   pod 'Kingfisher', '6.1.1'
   support_noti_pods

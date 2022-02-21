@@ -51,5 +51,20 @@
 		<string>remote-notification</string>
 		<string>voip</string>
 	</array>
+    <key>NSCameraUsageDescription</key>
+    <string>Sending photo and video call</string>
+    <key>NSContactsUsageDescription</key>
+    <string>NetAlo will continously upload your contacts to its heavily encrypted cloud servers to let you connect with your friends quickly</string>
+    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string>If you’d like to share your Location with friends, DLink needs location access to use this feature</string>
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>If you’d like to share your Live Location with friends, DLink needs location access when the app is in background</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>If you’d like to share your Location with friends, DLink needs location access to use this feature</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>Using voice call</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>Sending photo and updating your profile</string>
+
 </dict>
 </plist>

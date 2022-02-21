@@ -37,9 +37,11 @@ struct BuildConfig {
                 isVoiceCallEnable: true,
                 isHiddenSecretChat: true
             ),
+            isSyncDataInApp: true,
             allowReferralCode: false,
             searchByLike: true,
-            allowReplaceCountrycode: false
+            allowReplaceCountrycode: false,
+            isSyncContactInApp: true
         )
     )
 }

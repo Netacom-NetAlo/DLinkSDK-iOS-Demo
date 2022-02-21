@@ -11,7 +11,6 @@ import NetAloFull
 import NetAloLite
 import XCoordinator
 import NALocalization
-//import NATheme
 import RxCocoa
 import RxSwift
 import UserNotifications
@@ -23,19 +22,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 
     private lazy var mainWindow = UIWindow(frame: UIScreen.main.bounds)
 
-    public var netAloFull: NetAloFull!
+    public var netAloSDK: NetAloFull!
 
     private var disposeBag = DisposeBag()
     
     // MARK: - Application Delegate
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        self.netAloFull = NetAloFull(
+        self.netAloSDK = NetAloFull(
             config: BuildConfig.config
         )
         
         // Only show SDK after start success, Waiting maximun 10s
-        self.netAloFull
+        self.netAloSDK
             .start()
             .timeout(.seconds(10), scheduler: MainScheduler.instance)
             .catchAndReturn(())
@@ -45,9 +44,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                 // Init rooter
 
                 let mainTabBarController = DemoMainTabbarVC()
-                mainTabBarController.initialize(sdk: owner.netAloFull)
+                mainTabBarController.initialize(sdk: owner.netAloSDK)
                 
-                owner.netAloFull.buildSDKModule()
+                owner.netAloSDK.buildSDKModule()
                 owner.mainWindow.rootViewController  = mainTabBarController
                 owner.mainWindow.makeKeyAndVisible()
                 //TODO -Make sure client must login successed to set user info here
@@ -58,21 +57,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             .disposed(by: disposeBag)
         
         // Optional use notification
-        self.netAloFull.requestNotificationtPermission()
+        self.netAloSDK.requestNotificationtPermission()
         UNUserNotificationCenter.current().delegate = self
         
-        return netAloFull.application(application, didFinishLaunchingWithOptions: launchOptions)
+        return netAloSDK.application(application, didFinishLaunchingWithOptions: launchOptions)
     }
     
     public func setUser() {
-            let user = NetAloUserHolder(id: 4785074604085462,
-                                        phoneNumber: "maihuong1497",
+            let user = NetAloUserHolder(id: 4785074617325473,
+                                        phoneNumber: "quynhanh141997",
                                         email: "",
-                                        fullName: "Nguyễn Mai Hương",
+                                        fullName: "quynhanh141997",
                                         avatarUrl: "",
-                                        session: "7c922a7b662184b39ae47ca486c14cf028f371ce")
+                                        session: "a459ae8d28d58f1a98831a3f55fa4aebfc40e85d")
             do {
-                try self.netAloFull.set(user: user)
+                try self.netAloSDK.set(user: user)
             } catch let e {
                 print("Error \(e)")
             }
@@ -84,46 +83,46 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     // MARK: - AppDelegateViewModelOutputs
     
     public func applicationDidBecomeActive(_ application: UIApplication) {
-        netAloFull.applicationDidBecomeActive(application)
+        netAloSDK.applicationDidBecomeActive(application)
     }
 
     public func applicationWillResignActive(_ application: UIApplication) {
-        netAloFull.applicationWillResignActive(application)
+        netAloSDK.applicationWillResignActive(application)
     }
 
     public func applicationWillTerminate(_ application: UIApplication) {
-        netAloFull.applicationWillTerminate(application)
+        netAloSDK.applicationWillTerminate(application)
     }
 
     func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
-        netAloFull.application(application, supportedInterfaceOrientationsFor: window)
+        netAloSDK.application(application, supportedInterfaceOrientationsFor: window)
     }
 
     // UserActivity
     func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
-        netAloFull.application(application, continue: userActivity, restorationHandler: restorationHandler)
+        netAloSDK.application(application, continue: userActivity, restorationHandler: restorationHandler)
     }
 
     // Notification methods
     public func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-        netAloFull.application(application, didRegisterForRemoteNotificationsWithDeviceToken: deviceToken)
+        netAloSDK.application(application, didRegisterForRemoteNotificationsWithDeviceToken: deviceToken)
     }
     
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-        netAloFull.application(application, open: url, sourceApplication: sourceApplication, annotation: application)
+        netAloSDK.application(application, open: url, sourceApplication: sourceApplication, annotation: application)
     }
 
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-        netAloFull.application(app, open: url, options: options)
+        netAloSDK.application(app, open: url, options: options)
     }
     
     // MARK: - UNUserNotificationCenterDelegate
     public func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        netAloFull.userNotificationCenter(center, willPresent: notification, withCompletionHandler: completionHandler)
+        netAloSDK.userNotificationCenter(center, willPresent: notification, withCompletionHandler: completionHandler)
     }
 
     public func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-        netAloFull.userNotificationCenter(center, didReceive: response, withCompletionHandler: completionHandler)
+        netAloSDK.userNotificationCenter(center, didReceive: response, withCompletionHandler: completionHandler)
     }
 }
 
@@ -131,27 +130,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 extension AppDelegate {
     //SDK binding service
     private func bindingService() {
-        self.netAloFull.eventObservable
+        self.netAloSDK.eventObservable
             .asDriverOnErrorJustSkip()
             .drive(onNext: { [weak self] event in
                 guard let self = self else { return }
-                dump("Event 🤟🏻🤟🏻🤟🏻🤟🏻🤟🏻🤟🏻 \(event)")
+                dump("Event: \(event)")
                 switch event {
                 case .pressedUrl(let url):
-                    dump("PressedUrl 💪💪💪 : \(url)")
+                    dump("PressedUrl: \(url)")
                 case .mediaURL(let imageUrls, let videoUrls):
-                    dump("Images 💪💪💪: \(imageUrls)")
-                    dump("Video 💪💪💪: \(videoUrls)")
+                    dump("Images: \(imageUrls)")
+                    dump("Video: \(videoUrls)")
                 case .checkUserIsFriend(let userId):
-                    dump("Check Chat with 💪💪💪 : \(userId)")
+                    dump("Check Chat with: \(userId)")
                 case .didCloseSDK:
-                    dump("didCloseSDK 💪💪💪")
+                    dump("didCloseSDK")
                 case .pressedCall(let type):
-                    dump("pressedCall 💪💪💪 type \(type)")
+                    dump("pressedCall type: \(type)")
                 case .sessionExpired:
-                    dump("sessionExpired 💪💪💪")
+                    dump("sessionExpired")
                 case .updateBadge(let badge) :
-                    dump("updateBadge 💪💪💪 \(badge)")
+                    dump("updateBadge: \(badge)")
                 default: break
                 }
             })
