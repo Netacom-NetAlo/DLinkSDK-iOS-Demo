@@ -31,15 +31,12 @@ def language_pods
 end
 
 def netalo_pods
-  #switch 1 or 2
- pod 'NetacomSDKs', :git => 'https://github.com/Netacom-NetAlo/NetaloSDKs-iOS', branch: 'vnd/sdk_simulator_v1'
-  # pod 'NetacomSDKs', :git => 'https://github.com/Netacom-NetAlo/NetaloSDKs-iOS', branch: 'vnd/sdk_main_v1'
+  pod 'NetacomSDKs', :git => 'https://github.com/Netacom-NetAlo/NetaloSDKs-iOS', branch: 'vnd/sdk_main_v3'
   noti_netalo_pods
 end
 
 def noti_netalo_pods
-  pod 'NotificationSDK', :git => 'https://github.com/Netacom-NetAlo/NotiSDKs-iOS', branch: 'vnd/sdk_simulator_v1'
-  # pod 'NotificationSDK', :git => 'https://github.com/Netacom-NetAlo/NotiSDKs-iOS', branch: 'vnd/sdk_noti_v1'
+  pod 'NotificationSDK', :git => 'https://github.com/Netacom-NetAlo/NotiSDKs-iOS', branch: 'vnd/sdk_noti_v3'
 end
 
 def support_noti_pods
@@ -88,6 +85,10 @@ def component_pods
   pod 'Kingfisher', '6.1.1'
 end
 
+def gif_pods
+  pod 'lottie-ios', '3.2.3'
+end
+
 # ======================================TARGET PODS==========================================
 def app_pods
   resolver
@@ -100,6 +101,7 @@ def app_pods
   socket_pods
   common_pods
   netalo_pods
+  gif_pods
 end
 
 target 'VNDirectSDKDemo' do

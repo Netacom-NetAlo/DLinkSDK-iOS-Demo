@@ -72,6 +72,14 @@ class DemoSDKVC: UIViewController {
         return button
     }()
     
+    private let buttonSendMessage: UIButton = {
+        let button = UIButton(frame: .zero)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("send Message", for: .normal)
+        button.setTitleColor(.red, for: .normal)
+        return button
+    }()
+    
     private let stackview: UIStackView = {
         let stackView = UIStackView(frame: .zero)
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -116,11 +124,13 @@ class DemoSDKVC: UIViewController {
         stackview.addArrangedSubview(buttonShowChat)
         stackview.addArrangedSubview(buttonShowListGroup)
         stackview.addArrangedSubview(buttonShowCall)
+        stackview.addArrangedSubview(buttonSendMessage)
         stackview.addArrangedSubview(buttonChangeThemePurple)
         stackview.addArrangedSubview(buttonChangeThemeOrange)
         buttonShowVN.addTarget(self, action: #selector(ActionShowVN), for: .touchUpInside)
         buttonShowEN.addTarget(self, action: #selector(ActionShowEN), for: .touchUpInside)
         buttonShowChat.addTarget(self, action: #selector(ActionShowChat), for: .touchUpInside)
+        buttonSendMessage.addTarget(self, action: #selector(ActionSendMessage), for: .touchUpInside)
         buttonShowListGroup.addTarget(self, action: #selector(ActionShowListGroup), for: .touchUpInside)
         buttonShowCall.addTarget(self, action: #selector(ActionShowCall), for: .touchUpInside)
         buttonChangeThemePurple.addTarget(self, action: #selector(ActionChangeThemePurple), for: .touchUpInside)
@@ -161,5 +171,10 @@ class DemoSDKVC: UIViewController {
         themeManager.setPrimaryColor(.orange)
     }
     
+    @objc func ActionSendMessage(content: String = "Test SDK Dlink") {
+        netaloSDK?.sendMessage(content: content, targetUserID: "281474977725116", completion: { status in
+            print("Test SDK Dlink send message status: \(status) ")
+        })
+    }
 }
 
