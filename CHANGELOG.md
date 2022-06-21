@@ -1,3 +1,9 @@
+
+# V4
+
+- Show group chat with groupID
+
+
 # V3
 
 - Update V3

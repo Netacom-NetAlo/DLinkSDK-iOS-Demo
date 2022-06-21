@@ -56,6 +56,14 @@ class DemoSDKVC: UIViewController {
         return button
     }()
     
+    private let buttonShowGroupChat: UIButton = {
+        let button = UIButton(frame: .zero)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("show group chat", for: .normal)
+        button.setTitleColor(.red, for: .normal)
+        return button
+    }()
+    
     private let buttonShowListGroup: UIButton = {
         let button = UIButton(frame: .zero)
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -118,10 +126,12 @@ class DemoSDKVC: UIViewController {
         stackview.addArrangedSubview(buttonShowCall)
         stackview.addArrangedSubview(buttonChangeThemePurple)
         stackview.addArrangedSubview(buttonChangeThemeOrange)
+        stackview.addArrangedSubview(buttonShowGroupChat)
         buttonShowVN.addTarget(self, action: #selector(ActionShowVN), for: .touchUpInside)
         buttonShowEN.addTarget(self, action: #selector(ActionShowEN), for: .touchUpInside)
         buttonShowChat.addTarget(self, action: #selector(ActionShowChat), for: .touchUpInside)
         buttonShowListGroup.addTarget(self, action: #selector(ActionShowListGroup), for: .touchUpInside)
+        buttonShowGroupChat.addTarget(self, action: #selector(ActionShowGroupChat), for: .touchUpInside)
         buttonShowCall.addTarget(self, action: #selector(ActionShowCall), for: .touchUpInside)
         buttonChangeThemePurple.addTarget(self, action: #selector(ActionChangeThemePurple), for: .touchUpInside)
         buttonChangeThemeOrange.addTarget(self, action: #selector(ActionChangeThemeOrange), for: .touchUpInside)
@@ -142,6 +152,13 @@ class DemoSDKVC: UIViewController {
     @objc func ActionShowChat() {
         let testContact = NAContact(id: 281474977725116, phone: "+84368844250", fullName: "Huy 4G", profileUrl: "")
         netaloSDK?.showChat(with: testContact)
+    }
+    
+    @objc func ActionShowGroupChat() {
+        netaloSDK?.showGroupChat(with: "2873142614546572", completion: { error in
+            let err = error as? NAError
+            print("showGroupChat with err: \(err?.description ?? "")")
+        })
     }
     
     @objc func ActionShowListGroup() {
