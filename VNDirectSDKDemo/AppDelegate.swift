@@ -64,21 +64,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     }
     
     public func setUser() {
-            let user = NetAloUserHolder(id: 4785074617325473,
-                                        phoneNumber: "quynhanh141997",
-                                        email: "",
-                                        fullName: "quynhanh141997",
-                                        avatarUrl: "",
-                                        session: "a459ae8d28d58f1a98831a3f55fa4aebfc40e85d")
-            do {
-                try self.netAloSDK.set(user: user)
-            } catch let e {
-                print("Error \(e)")
-            }
-
-
-            bindingService()
+        let user = NetAloUserHolder(id: 4785074606697392,
+                                    phoneNumber: "son1990",
+                                    email: "",
+                                    fullName: "son1990",
+                                    avatarUrl: "",
+                                    session: "b2d7e47a62b5cb14f698dc210d8958bfef984816")
+        do {
+            try self.netAloSDK?.set(user: user)
+        } catch let e {
+            print("Error \(e)")
         }
+        
+        
+        bindingService()
+    }
     
     // MARK: - AppDelegateViewModelOutputs
     

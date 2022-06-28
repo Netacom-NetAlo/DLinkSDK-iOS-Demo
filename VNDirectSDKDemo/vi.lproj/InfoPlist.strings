@@ -13,4 +13,3 @@
 "NSLocationWhenInUseUsageDescription"          = "Nếu bạn muốn chia sẻ vị trí hiện tại với bạn bè, DLink cần quyền truy cập vị trí của bạn để sử dụng tính năng này.";
 "NSLocationAlwaysAndWhenInUseUsageDescription" = "Nếu bạn muốn chia sẻ vị trí hiện tại với bạn bè, DLink cần quyền truy cập vị trí của bạn để sử dụng tính năng này.";
 "NSLocationAlwaysUsageDescription"             = "Nếu bạn muốn chia sẻ trực tiếp vị trí hiện tại với bạn bè, DLink cần quyền truy cập vị trí khi DLink chạy nền.";
-"NSUserTrackingUsageDescription"               = "Dữ liệu của bạn sẽ được sử dụng để cung cấp cho bạn trải nghiệm quảng cáo tốt hơn và được cá nhân hóa";

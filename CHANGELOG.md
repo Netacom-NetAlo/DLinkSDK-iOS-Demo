@@ -1,4 +1,12 @@
 
+# V5
+
+- Remmove key NSUserTrackingUsageDescription 
+- Hiden live Location || Location
+- Hiden GPS info 
+
+
+
 # V4
 
 - Show group chat with groupID

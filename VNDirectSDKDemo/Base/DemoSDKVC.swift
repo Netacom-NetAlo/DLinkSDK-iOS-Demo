@@ -122,11 +122,12 @@ class DemoSDKVC: UIViewController {
         stackview.addArrangedSubview(buttonShowVN)
         stackview.addArrangedSubview(buttonShowEN)
         stackview.addArrangedSubview(buttonShowChat)
+        stackview.addArrangedSubview(buttonShowGroupChat)
         stackview.addArrangedSubview(buttonShowListGroup)
         stackview.addArrangedSubview(buttonShowCall)
         stackview.addArrangedSubview(buttonChangeThemePurple)
         stackview.addArrangedSubview(buttonChangeThemeOrange)
-        stackview.addArrangedSubview(buttonShowGroupChat)
+        
         buttonShowVN.addTarget(self, action: #selector(ActionShowVN), for: .touchUpInside)
         buttonShowEN.addTarget(self, action: #selector(ActionShowEN), for: .touchUpInside)
         buttonShowChat.addTarget(self, action: #selector(ActionShowChat), for: .touchUpInside)
@@ -155,7 +156,7 @@ class DemoSDKVC: UIViewController {
     }
     
     @objc func ActionShowGroupChat() {
-        netaloSDK?.showGroupChat(with: "2873142614546572", completion: { error in
+        netaloSDK?.showGroupChat(with: "4792085310149959", completion: { error in
             let err = error as? NAError
             print("showGroupChat with err: \(err?.description ?? "")")
         })

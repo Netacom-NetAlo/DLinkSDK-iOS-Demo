@@ -7,6 +7,7 @@
 
 import NetAloLite
 import NetAloFull
+import CloudKit
 
 struct BuildConfig {
     static var config = NetaloConfiguration(
@@ -26,7 +27,7 @@ struct BuildConfig {
                 allowAddContact: false,
                 allowBlockContact: false,
                 allowSetUserProfileUrl: false,
-                allowEnableLocationFeature: true,
+                allowEnableLocationFeature: false,
                 allowTrackingUsingSDK: true,
                 isHiddenEditProfile: true,
                 allowAddNewContact: false,
@@ -42,6 +43,7 @@ struct BuildConfig {
             searchByLike: true,
             allowReplaceCountrycode: false,
             isSyncContactInApp: true
-        )
+        ),
+        permissions: [SDKPermissionSet.microPhone]
     )
 }

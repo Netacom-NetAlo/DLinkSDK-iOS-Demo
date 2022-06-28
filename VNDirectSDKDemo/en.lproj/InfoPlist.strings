@@ -13,4 +13,3 @@
 "NSLocationWhenInUseUsageDescription"          = "If you’d like to share your Location with friends, DLink needs location access to use this feature";
 "NSLocationAlwaysAndWhenInUseUsageDescription" = "If you’d like to share your Location with friends, DLink needs location access to use this feature";
 "NSLocationAlwaysUsageDescription"             = "If you’d like to share your Live Location with friends, DLink needs location access when the app is in background";
-"NSUserTrackingUsageDescription"               = "Your data will be used to provide you a better and personalized ad experience";
