@@ -143,33 +143,48 @@ class DemoSDKVC: UIViewController {
     }
     
     @objc func ActionShowEN() {
-        netaloSDK?.setLanguage(with: .english)
+        self.netaloSDK?.setLanguage(with: .english)
     }
     
     @objc func ActionShowVN() {
-        netaloSDK?.setLanguage(with: .vietnamese)
+        self.netaloSDK?.setLanguage(with: .vietnamese)
     }
     
     @objc func ActionShowChat() {
         let testContact = NAContact(id: 281474977725116, phone: "+84368844250", fullName: "Huy 4G", profileUrl: "")
-        netaloSDK?.showChat(with: testContact)
+        self.netaloSDK?.showChat(with: testContact, completion: { error in
+            let err = error as? NAError
+            print("showChat with err: \(err?.description ?? "")")
+        })
     }
     
     @objc func ActionShowGroupChat() {
-        netaloSDK?.showGroupChat(with: "4792085310149959", completion: { error in
+        self.netaloSDK?.showGroupChat(with: "4792085310149959", completion: { error in
             let err = error as? NAError
             print("showGroupChat with err: \(err?.description ?? "")")
         })
     }
     
     @objc func ActionShowListGroup() {
-        netaloSDK?.showVNDemoVC()
+        self.netaloSDK?.showVNDemoVC(completion: { error in
+            let err = error as? NAError
+            print("showVNDemoVC with err: \(err?.description ?? "")")
+        })
     }
     
     @objc func ActionShowCall() {
         let testContact = NAContact(id: 281474977725116, phone: "+84368844250", fullName: "Huy 4G", profileUrl: "")
-        self.netaloSDK?.showCall(with: testContact, isVideoCall: false)
+        self.netaloSDK?.showCall(with: testContact, isVideoCall: false, completion: { error in
+            let err = error as? NAError
+            print("showCall with err: \(err?.description ?? "")")
+        })
     }
+    
+//    @objc func ActionSendMessage() {
+//        self.netaloSDK?.sendMessage(content: "SDK TEST SEND MESSAGE", targetUserID: "281474977725116", completion: { _status in
+//            print("SDK TEST SEND STATUS: \(_status)")
+//        })
+//    }
     
     @objc func ActionChangeThemePurple() {
         themeManager.setPrimaryColor(.purple)
