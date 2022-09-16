@@ -1,5 +1,13 @@
 # gem install cocoapods-binary
 # plugin 'cocoapods-binary'
+#
+# Step pull new code
+#  1. Comment
+#       pod 'NetacomSDKs', :git => 'https://github.com/Netacom-NetAlo/NetaloSDKs-iOS', branch: 'vnd/xxxx'
+#       pod 'NotificationSDK', :git => 'https://github.com/Netacom-NetAlo/NotiSDKs-iOS', branch: 'vnd/xxx'
+#  2. pod install -> remove old code
+#  3. pod install -> pull new code
+#
 
 platform :ios, '11.0'
 use_frameworks!
@@ -35,12 +43,12 @@ def language_pods
 end
 
 def netalo_pods
-  pod 'NetacomSDKs', :git => 'https://github.com/Netacom-NetAlo/NetaloSDKs-iOS', branch: 'vnd/sdk_main_v6'
+  pod 'NetacomSDKs', :git => 'https://github.com/Netacom-NetAlo/NetaloSDKs-iOS', branch: 'vnd/sdk_main_v7'
   noti_netalo_pods
 end
 
 def noti_netalo_pods
-  pod 'NotificationSDK', :git => 'https://github.com/Netacom-NetAlo/NotiSDKs-iOS', branch: 'vnd/sdk_noti_v6'
+  pod 'NotificationSDK', :git => 'https://github.com/Netacom-NetAlo/NotiSDKs-iOS', branch: 'vnd/sdk_noti_v7'
 end
 
 def support_noti_pods
