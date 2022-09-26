@@ -43,12 +43,12 @@ def language_pods
 end
 
 def netalo_pods
-  pod 'NetacomSDKs', :git => 'https://github.com/Netacom-NetAlo/NetaloSDKs-iOS', branch: 'vnd/sdk_main_v7'
+  pod 'NetacomSDKs', :git => 'https://github.com/Netacom-NetAlo/NetaloSDKs-iOS', branch: 'vnd/sdk_main_v8'
   noti_netalo_pods
 end
 
 def noti_netalo_pods
-  pod 'NotificationSDK', :git => 'https://github.com/Netacom-NetAlo/NotiSDKs-iOS', branch: 'vnd/sdk_noti_v7'
+  pod 'NotificationSDK', :git => 'https://github.com/Netacom-NetAlo/NotiSDKs-iOS', branch: 'vnd/sdk_noti_v8'
 end
 
 def support_noti_pods
