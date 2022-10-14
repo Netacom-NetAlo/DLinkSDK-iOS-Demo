@@ -10,9 +10,9 @@ import NetAloFull
 
 class DemoMainTabbarVC: UITabBarController, UITabBarControllerDelegate {
     
-    private var sdk: NetAloFull?
+    private var sdk: NetAloFullManager?
     
-    func initialize(sdk: NetAloFull) {
+    func initialize(sdk: NetAloFullManager) {
         self.sdk = sdk
         super.loadView()
         

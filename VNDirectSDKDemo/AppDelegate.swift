@@ -22,14 +22,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 
     private lazy var mainWindow = UIWindow(frame: UIScreen.main.bounds)
 
-    public var netAloSDK: NetAloFull!
+    public var netAloSDK: NetAloFullManager!
 
     private var disposeBag = DisposeBag()
     
     // MARK: - Application Delegate
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        self.netAloSDK = NetAloFull(
+        self.netAloSDK = NetAloFullManager(
             config: BuildConfig.config
         )
         
@@ -133,7 +133,6 @@ extension AppDelegate {
         self.netAloSDK.eventObservable
             .asDriverOnErrorJustSkip()
             .drive(onNext: { [weak self] event in
-                guard let self = self else { return }
                 dump("Event: \(event)")
                 switch event {
                 case .pressedUrl(let url):

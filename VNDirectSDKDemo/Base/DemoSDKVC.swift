@@ -90,9 +90,9 @@ class DemoSDKVC: UIViewController {
         return stackView
     }()
     
-    private var netaloSDK: NetAloFull?
+    private var netaloSDK: NetAloFullManager?
     
-    init(netaloSDK: NetAloFull?) {
+    init(netaloSDK: NetAloFullManager?) {
         self.netaloSDK = netaloSDK
         super.init(nibName: nil, bundle: nil)
     }
