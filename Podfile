@@ -2,19 +2,19 @@
 # plugin 'cocoapods-binary'
 
 
-platform :ios, '11.0'
+platform :ios, '12.0'
 use_frameworks!
 # keep_source_code_for_prebuilt_frameworks!
 inhibit_all_warnings!
 
 # ======================================GROUP PODS==========================================
 def netalo_pods
-  pod 'NetacomSDKs', :git => 'https://github.com/Netacom-NetAlo/NetaloSDKs-iOS', tag: '0.0.9'
+   pod 'NetacomSDKs', :git => 'https://github.com/Netacom-NetAlo/NetaloSDKs-iOS', tag: '0.1.0'
   noti_netalo_pods
 end
 
 def noti_netalo_pods
-  pod 'NotificationSDK', :git => 'https://github.com/Netacom-NetAlo/NotiSDKs-iOS', tag: '0.0.9'
+  pod 'NotificationSDK', :git => 'https://github.com/Netacom-NetAlo/NotiSDKs-iOS', tag: '0.1.0'
 end
 
 def resolver
@@ -49,7 +49,8 @@ post_install do |installer|
     target.build_configurations.each do |config|
       config.build_settings['ENABLE_BITCODE'] = 'NO'
       config.build_settings['ARCHS'] = 'arm64 x86_64'
-	config.build_settings['EXCLUDED_ARCHS[sdk=iphonesimulator*]'] = 'arm64'
+ 	config.build_settings['EXCLUDED_ARCHS[sdk=iphonesimulator*]'] = 'arm64'
+	config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
     end
   end
 end
