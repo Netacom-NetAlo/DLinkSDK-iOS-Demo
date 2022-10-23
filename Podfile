@@ -49,8 +49,7 @@ post_install do |installer|
     target.build_configurations.each do |config|
       config.build_settings['ENABLE_BITCODE'] = 'NO'
       config.build_settings['ARCHS'] = 'arm64 x86_64'
- 	config.build_settings['EXCLUDED_ARCHS[sdk=iphonesimulator*]'] = 'arm64'
-	config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
+ 	    config.build_settings['EXCLUDED_ARCHS[sdk=iphonesimulator*]'] = 'arm64'
     end
   end
 end
