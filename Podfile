@@ -9,22 +9,22 @@ inhibit_all_warnings!
 
 # ======================================GROUP PODS==========================================
 def netalo_pods
-   pod 'NetacomSDKs', :git => 'https://github.com/Netacom-NetAlo/NetaloSDKs-iOS', tag: '0.1.0'
+  pod 'NetacomSDKs', :git => 'https://github.com/Netacom-NetAlo/NetaloSDKs-iOS', tag: '0.1.2'
   noti_netalo_pods
 end
 
 def noti_netalo_pods
-  pod 'NotificationSDK', :git => 'https://github.com/Netacom-NetAlo/NotiSDKs-iOS', tag: '0.1.0'
+  pod 'NotificationSDK', :git => 'https://github.com/Netacom-NetAlo/NotiSDKs-iOS', tag: '0.1.1'
+  pod 'WebRTC', :git => 'https://github.com/Netacom-NetAlo/WebRTC-iOS', branch: 'main'
 end
 
 def resolver
-  pod 'Resolver', git: 'https://github.com/Netacom-NetAlo/Resolver-iOS'
+  pod 'Resolver', :git => 'https://github.com/Netacom-NetAlo/Resolver-iOS', branch: 'main'
 end
 
 # ======================================TARGET PODS==========================================
 def app_pods
   pod 'MessageKit', :git => 'https://github.com/Netacom-NetAlo/Messagekit-iOS'
-  pod 'SwiftLinkPreview', :git => 'https://github.com/Netacom-NetAlo/SwiftLinkPreview', branch: 'dev_1.0'
   resolver
   netalo_pods
 end

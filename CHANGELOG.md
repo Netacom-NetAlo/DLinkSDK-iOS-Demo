@@ -1,3 +1,11 @@
+#V11
+
+- [Fix] - Check call existed.
+- [Fix] - Race condition connect and disconnect socket when to show group chat
+- SDK v0.1.1
+- Update PodFile
+
+
 #V10
 
 - Update Kingfisher, Lottie
