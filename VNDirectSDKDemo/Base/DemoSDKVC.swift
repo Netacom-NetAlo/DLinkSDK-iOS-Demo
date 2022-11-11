@@ -16,6 +16,14 @@ import Resolver
 class DemoSDKVC: UIViewController {
     @LazyInjected public var themeManager: NAThemeServiceProtocol
     
+    private let buttonSetUserAfterLogout: UIButton = {
+        let button = UIButton(frame: .zero)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Set User After Logout", for: .normal)
+        button.setTitleColor(.red, for: .normal)
+        return button
+    }()
+    
     private let buttonChangeThemePurple: UIButton = {
         let button = UIButton(frame: .zero)
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -80,6 +88,14 @@ class DemoSDKVC: UIViewController {
         return button
     }()
     
+    private let buttonLogout: UIButton = {
+        let button = UIButton(frame: .zero)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Logout", for: .normal)
+        button.setTitleColor(.red, for: .normal)
+        return button
+    }()
+
     private let stackview: UIStackView = {
         let stackView = UIStackView(frame: .zero)
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -113,10 +129,10 @@ class DemoSDKVC: UIViewController {
         view.addSubview(stackview)
         
         NSLayoutConstraint.activate([
-            stackview.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            stackview.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
             stackview.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             stackview.topAnchor.constraint(equalTo: view.topAnchor),
-            stackview.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            stackview.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -80)
         ])
         
         stackview.addArrangedSubview(buttonShowVN)
@@ -125,8 +141,10 @@ class DemoSDKVC: UIViewController {
         stackview.addArrangedSubview(buttonShowGroupChat)
         stackview.addArrangedSubview(buttonShowListGroup)
         stackview.addArrangedSubview(buttonShowCall)
-        stackview.addArrangedSubview(buttonChangeThemePurple)
-        stackview.addArrangedSubview(buttonChangeThemeOrange)
+//        stackview.addArrangedSubview(buttonChangeThemePurple)
+//        stackview.addArrangedSubview(buttonChangeThemeOrange)
+        stackview.addArrangedSubview(buttonSetUserAfterLogout)
+        stackview.addArrangedSubview(buttonLogout)
         
         buttonShowVN.addTarget(self, action: #selector(ActionShowVN), for: .touchUpInside)
         buttonShowEN.addTarget(self, action: #selector(ActionShowEN), for: .touchUpInside)
@@ -136,6 +154,8 @@ class DemoSDKVC: UIViewController {
         buttonShowCall.addTarget(self, action: #selector(ActionShowCall), for: .touchUpInside)
         buttonChangeThemePurple.addTarget(self, action: #selector(ActionChangeThemePurple), for: .touchUpInside)
         buttonChangeThemeOrange.addTarget(self, action: #selector(ActionChangeThemeOrange), for: .touchUpInside)
+        buttonSetUserAfterLogout.addTarget(self, action: #selector(ActionSetUserAfterLogout), for: .touchUpInside)
+        buttonLogout.addTarget(self, action: #selector(ActionLogout), for: .touchUpInside)
     }
     
     public func showBadge(with number: Int) {
@@ -151,7 +171,7 @@ class DemoSDKVC: UIViewController {
     }
     
     @objc func ActionShowChat() {
-        let testContact = NAContact(id: 281474977725116, phone: "+84368844250", fullName: "Huy 4G", profileUrl: "")
+        let testContact = NAContact(id: 4785074606744072, phone: "rooney", fullName: "rooney", profileUrl: "")
         self.netaloSDK?.showChat(with: testContact, completion: { error in
             let err = error as? NAError
             print("showChat with err: \(err?.description ?? "")")
@@ -159,7 +179,7 @@ class DemoSDKVC: UIViewController {
     }
     
     @objc func ActionShowGroupChat() {
-        self.netaloSDK?.showGroupChat(with: "4792085310149959", completion: { error in
+        self.netaloSDK?.showGroupChat(with: "4793279953864738", completion: { error in
             let err = error as? NAError
             print("showGroupChat with err: \(err?.description ?? "")")
         })
@@ -173,7 +193,7 @@ class DemoSDKVC: UIViewController {
     }
     
     @objc func ActionShowCall() {
-        let testContact = NAContact(id: 281474977725116, phone: "+84368844250", fullName: "Huy 4G", profileUrl: "")
+        let testContact = NAContact(id: 4785074606744072, phone: "rooney", fullName: "rooney", profileUrl: "")
         self.netaloSDK?.showCall(with: testContact, isVideoCall: false, completion: { error in
             let err = error as? NAError
             print("showCall with err: \(err?.description ?? "")")
@@ -194,5 +214,23 @@ class DemoSDKVC: UIViewController {
         themeManager.setPrimaryColor(.orange)
     }
     
+    @objc func ActionSetUserAfterLogout() {
+        
+        let user = NetAloUserHolder(id: 4785074617633555,
+                                    phoneNumber: "maymaylam24",
+                                    email: "",
+                                    fullName: "NGUYỄN LÂM HỒNG MINH",
+                                    avatarUrl: "",
+                                    session: "0120a6ed20327d154bdc9521c1db8992dc1fV2x2")
+        do {
+            try self.netaloSDK?.set(user: user)
+        } catch let e {
+            print("Error \(e)")
+        }
+    }
+    
+    @objc func ActionLogout() {
+        netaloSDK?.logout()
+    }
 }
 
