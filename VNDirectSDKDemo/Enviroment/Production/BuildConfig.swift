@@ -30,8 +30,7 @@ struct BuildConfig {
                 allowEnableLocationFeature: false,
                 allowTrackingUsingSDK: true,
                 isHiddenEditProfile: true,
-                allowAddNewContact: false,
-                allowEditContact: false
+                allowAddNewContact: false
             ),
             chat: FeatureConfig.ChatConfig(
                 isVideoCallEnable: true,

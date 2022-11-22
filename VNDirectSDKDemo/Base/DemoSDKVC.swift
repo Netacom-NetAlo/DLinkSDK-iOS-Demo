@@ -186,7 +186,7 @@ class DemoSDKVC: UIViewController {
     }
     
     @objc func ActionShowListGroup() {
-        self.netaloSDK?.showVNDemoVC(completion: { error in
+        self.netaloSDK?.showListGroup(completion: { error in
             let err = error as? NAError
             print("showVNDemoVC with err: \(err?.description ?? "")")
         })
