@@ -87,6 +87,14 @@ class DemoSDKVC: UIViewController {
         button.setTitleColor(.red, for: .normal)
         return button
     }()
+
+    private let buttonShowNumberOfBadge: UIButton = {
+        let button = UIButton(frame: .zero)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Badge Number", for: .normal)
+        button.setTitleColor(.red, for: .normal)
+        return button
+    }()
     
     private let buttonLogout: UIButton = {
         let button = UIButton(frame: .zero)
@@ -141,6 +149,7 @@ class DemoSDKVC: UIViewController {
         stackview.addArrangedSubview(buttonShowGroupChat)
         stackview.addArrangedSubview(buttonShowListGroup)
         stackview.addArrangedSubview(buttonShowCall)
+        stackview.addArrangedSubview(buttonShowNumberOfBadge)
 //        stackview.addArrangedSubview(buttonChangeThemePurple)
 //        stackview.addArrangedSubview(buttonChangeThemeOrange)
         stackview.addArrangedSubview(buttonSetUserAfterLogout)
@@ -155,6 +164,7 @@ class DemoSDKVC: UIViewController {
         buttonChangeThemePurple.addTarget(self, action: #selector(ActionChangeThemePurple), for: .touchUpInside)
         buttonChangeThemeOrange.addTarget(self, action: #selector(ActionChangeThemeOrange), for: .touchUpInside)
         buttonSetUserAfterLogout.addTarget(self, action: #selector(ActionSetUserAfterLogout), for: .touchUpInside)
+        buttonShowNumberOfBadge.addTarget(self, action: #selector(NumberOfBadge), for: .touchUpInside)
         buttonLogout.addTarget(self, action: #selector(ActionLogout), for: .touchUpInside)
     }
     
@@ -176,6 +186,13 @@ class DemoSDKVC: UIViewController {
             let err = error as? NAError
             print("showChat with err: \(err?.description ?? "")")
         })
+    }
+
+    @objc func NumberOfBadge() {
+        self.netaloSDK?.getNumberOfBadge({ NumberOfBadge in
+            print("NumberOfBadge: \(NumberOfBadge)")
+        })
+
     }
     
     @objc func ActionShowGroupChat() {
