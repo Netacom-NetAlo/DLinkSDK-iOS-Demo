@@ -88,6 +88,14 @@ class DemoSDKVC: UIViewController {
         return button
     }()
 
+    private let buttonDidReceive: UIButton = {
+        let button = UIButton(frame: .zero)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("DidReceive Message", for: .normal)
+        button.setTitleColor(.red, for: .normal)
+        return button
+    }()
+
     private let buttonShowNumberOfBadge: UIButton = {
         let button = UIButton(frame: .zero)
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -144,11 +152,12 @@ class DemoSDKVC: UIViewController {
         ])
         
         stackview.addArrangedSubview(buttonShowVN)
-        stackview.addArrangedSubview(buttonShowEN)
+//        stackview.addArrangedSubview(buttonShowEN)
         stackview.addArrangedSubview(buttonShowChat)
         stackview.addArrangedSubview(buttonShowGroupChat)
         stackview.addArrangedSubview(buttonShowListGroup)
         stackview.addArrangedSubview(buttonShowCall)
+        stackview.addArrangedSubview(buttonDidReceive)
         stackview.addArrangedSubview(buttonShowNumberOfBadge)
 //        stackview.addArrangedSubview(buttonChangeThemePurple)
 //        stackview.addArrangedSubview(buttonChangeThemeOrange)
@@ -156,7 +165,7 @@ class DemoSDKVC: UIViewController {
         stackview.addArrangedSubview(buttonLogout)
         
         buttonShowVN.addTarget(self, action: #selector(ActionShowVN), for: .touchUpInside)
-        buttonShowEN.addTarget(self, action: #selector(ActionShowEN), for: .touchUpInside)
+//        buttonShowEN.addTarget(self, action: #selector(ActionShowEN), for: .touchUpInside)
         buttonShowChat.addTarget(self, action: #selector(ActionShowChat), for: .touchUpInside)
         buttonShowListGroup.addTarget(self, action: #selector(ActionShowListGroup), for: .touchUpInside)
         buttonShowGroupChat.addTarget(self, action: #selector(ActionShowGroupChat), for: .touchUpInside)
@@ -165,6 +174,7 @@ class DemoSDKVC: UIViewController {
         buttonChangeThemeOrange.addTarget(self, action: #selector(ActionChangeThemeOrange), for: .touchUpInside)
         buttonSetUserAfterLogout.addTarget(self, action: #selector(ActionSetUserAfterLogout), for: .touchUpInside)
         buttonShowNumberOfBadge.addTarget(self, action: #selector(NumberOfBadge), for: .touchUpInside)
+        buttonDidReceive.addTarget(self, action: #selector(ActionDidReceive), for: .touchUpInside)
         buttonLogout.addTarget(self, action: #selector(ActionLogout), for: .touchUpInside)
     }
     
@@ -186,6 +196,16 @@ class DemoSDKVC: UIViewController {
             let err = error as? NAError
             print("showChat with err: \(err?.description ?? "")")
         })
+    }
+
+    @objc func ActionDidReceive() {
+        self.netaloSDK?.didReceive(
+            messageJson: "{\"messageId\":\"637844810459254798\",\"groupId\":\"4794535825664490\",\"message\":\"1234a98\",\"senderUin\":\"4785074617643083\",\"createdAt\":\"1686906959572377\",\"recipientUins\":[\"4785074617681017\",\"4785074617709101\"],\"type\":\"text\",\"attachments\":\"\",\"groupType\":\"GROUP_TYPE_PUBLIC\",\"nonce\":\"n637844810459254798\"}",
+            completion: { error in
+                let err = error as? NAError
+                print("didReceive with err: \(err?.description ?? "")")
+            }
+        )
     }
 
     @objc func NumberOfBadge() {
