@@ -150,6 +150,8 @@ extension AppDelegate {
                     dump("sessionExpired")
                 case .updateBadge(let badge) :
                     dump("updateBadge: \(badge)")
+                case .tokenAvailable(let isAvailable):
+                    dump("tokenAvailable \(isAvailable)")
                 default: break
                 }
             })
