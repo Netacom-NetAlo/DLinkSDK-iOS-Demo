@@ -96,14 +96,6 @@ class DemoSDKVC: UIViewController {
         return button
     }()
 
-    private let buttonCheckToken: UIButton = {
-        let button = UIButton(frame: .zero)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Check Token", for: .normal)
-        button.setTitleColor(.red, for: .normal)
-        return button
-    }()
-
     private let buttonShowNumberOfBadge: UIButton = {
         let button = UIButton(frame: .zero)
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -167,7 +159,6 @@ class DemoSDKVC: UIViewController {
         stackview.addArrangedSubview(buttonShowCall)
         stackview.addArrangedSubview(buttonDidReceive)
         stackview.addArrangedSubview(buttonShowNumberOfBadge)
-        stackview.addArrangedSubview(buttonCheckToken)
         stackview.addArrangedSubview(buttonChangeThemePurple)
         stackview.addArrangedSubview(buttonChangeThemeOrange)
         stackview.addArrangedSubview(buttonSetUserAfterLogout)
@@ -185,7 +176,6 @@ class DemoSDKVC: UIViewController {
         buttonShowNumberOfBadge.addTarget(self, action: #selector(NumberOfBadge), for: .touchUpInside)
         buttonDidReceive.addTarget(self, action: #selector(ActionDidReceive), for: .touchUpInside)
         buttonLogout.addTarget(self, action: #selector(ActionLogout), for: .touchUpInside)
-        buttonCheckToken.addTarget(self, action: #selector(ActionCheckToken), for: .touchUpInside)
 
     }
     
@@ -274,14 +264,6 @@ class DemoSDKVC: UIViewController {
         } catch let e {
             print("Error \(e)")
         }
-    }
-
-    @objc func ActionCheckToken() {
-        self.netaloSDK?.checkTokenAvailable("0686c590d5d9c7d34fc2ad8b2f39382a711aBmsD",
-            completion: { isAvailable in
-                print("checkTokenAvailable: \(isAvailable ? "true" : "flase")")
-            }
-        )
     }
     
     @objc func ActionLogout() {

@@ -9,12 +9,12 @@ inhibit_all_warnings!
 
 # ======================================GROUP PODS==========================================
 def netalo_pods
-  pod 'NetacomSDKs', :git => 'https://github.com/Netacom-NetAlo/NetaloSDKs-iOS', tag: '0.1.8'
+  pod 'NetacomSDKs', :git => 'https://github.com/Netacom-NetAlo/NetaloSDKs-iOS', tag: '0.1.9'
   noti_netalo_pods
 end
 
 def noti_netalo_pods
-  pod 'NotificationSDK', :git => 'https://github.com/Netacom-NetAlo/NotiSDKs-iOS', tag: '0.1.8'
+  pod 'NotificationSDK', :git => 'https://github.com/Netacom-NetAlo/NotiSDKs-iOS', tag: '0.1.9'
   pod 'WebRTC', :git => 'https://github.com/Netacom-NetAlo/WebRTC-iOS', branch: 'main'
 end
 
